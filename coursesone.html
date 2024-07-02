@@ -130,28 +130,30 @@
                 </ul>
             </div>
             <div class=" col-md-5 offset-md-1">
-                <form class="hero-form p-5">
+                <form class="hero-form p-5" id="enrollmentForm">
                     <h3>Enroll Now for Offer 60% on course fee</h3>
 
                     <div class="mb-4">
-                        <label for="exampleInputEmail1" class="form-label mb-0">Full Name</label>
-                        <input type="email" class="form-control border-0" id="exampleInputEmail1">
+                        <label for="fullName" class="form-label mb-0">Full Name</label>
+                        <input type="text" placeholder="Enter full name" class="form-control border-0" id="fullName" required>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputEmail3" class="form-label mb-0">email</label>
-                        <input type="email" class="form-control border-0" id="exampleInputEmail3">
+                        <label for="email" class="form-label mb-0">Email</label>
+                        <input type="email" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" 
+                        required placeholder="Enter your email"  title="please enter valid email [test@test.com]." class="form-control border-0" id="email" required>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputEmail4" class="form-label mb-0">phone</label>
-                        <input type="email" class="form-control border-0" id="exampleInputEmail4">
+                        <label for="mobNumber" class="form-label mb-0">phone</label>
+                        <input type="text" placeholder="Enter your mobile number" name="Phone Number" pattern="[7-9]{1}[0-9]{9}" 
+                        title="Phone number with 7-9 and remaing 9 digit with 0-9" class="form-control border-0" id="mobNumber" required>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputEmail5" class="form-label mb-0">message</label>
-                        <input type="email" class="form-control border-0" id="exampleInputEmail5">
+                        <label for="course" class="form-label mb-0">Course Selected</label>
+                        <input type="text" class="form-control border-0" id="course" value="Full Stack Java" readonly>
                     </div>
 
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary btn-lg">Enroll</button>
+                        <button type="submit" class="btn btn-primary btn-lg" id="enrollButton">Enroll</button>
                     </div>
                 </form>
 
@@ -166,7 +168,9 @@
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="section-title bg-white text-center text-primary px-3">Course</h6>
             <h1 class="mb-5">Java Full Stack Development</h1>
-            <p class="mb-4">Full stack web development courses cover a wide range of topics essential for building both front-end and back-end components of web applications. These include HTML and CSS, JavaScript for front-end development, and server-side languages such as Node.js, Python, or Ruby for back-end development.</p>
+            <p class="mb-4">100% Job Oriented program is designed to equip you with industry required skills in Java Full Stack Development.</p>
+            <p class="mb-4">After completing the course, you will be proficient in building full stack applications using Java technologies and React frontend framework.</p>
+            <p class="mb-4">This program prepares you for roles such as Java Developer, Java Backend Developer, Java Full Stack Developer, and React Frontend Developer</p>
             <h1>Syllabus</h1>
         </div>
         <div class="container">
@@ -176,16 +180,16 @@
                         <div class="card">
                             <div class="card-header" id="headingOne">
                                 <h2 class="clearfix mb-0">
-                                    <span>Section 1</span>
+                                    <span>1) Java Classes & Interfaces</span>
                                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fa fa-plus-circle"></i></button>
                                 </h2>
                             </div>
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 
                                 <ul>
-                                    <li>Apple</li>
-                                    <li>Orange</li>
-                                    <li>Mango</li>
+                                    <li>Understanding OOP principles</li>
+                                    <li>Defining and implementing classes and interfaces</li>
+                                    <li>Polymorphism, Inheritance, and encapsulation</li>
                                   </ul>
                                          
                                                       </div>
@@ -194,40 +198,156 @@
                         <div class="card">
                             <div class="card-header" id="headingTwo">
                                 <h2 class="mb-0">
-                                    <span>Section 2</span>
+                                    <span>2) Application Layers & MVC Architecture</span>
                                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fa fa-plus-circle"></i></button>
                                 </h2>
                             </div>
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                 <ul>
-                                    <li>Apple</li>
-                                    <li>Orange</li>
-                                    <li>Mango</li>
-                                  </ul>                                </div>
+                                    <li>Understanding the MVC (Model-View-Controller) pattern</li>
+                                    <li>Designing Application Layers (Presentation, Business, Data Access)</li>
+                                    <li>Implementing MVC in Java applications</li>
+                                  </ul> 
+                                                </div>
                         </div>
                         
                         <div class="card">
                             <div class="card-header" id="headingThree">
                                 <h2 class="mb-0">
-                                    <span>Section 3</span>
+                                    <span>3) JDBC Interfaces & Classes</span>
                                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fa fa-plus-circle"></i></button>
                                 </h2>
                             </div>
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                 <ul>
-                                    <li>Apple</li>
-                                    <li>Orange</li>
-                                    <li>Mango</li>
+                                    <li>Introduction to JDBC</li>
+                                    <li>Creating database in MySQL</li>
+                                    <li>Connecting Java applications with databases</li>
+                                    <li>Performing CRUD operations using JDBC</li>
                                   </ul>                                </div>
                         </div>
                         <div class="card">
                             <div class="card-header" id="headingFour">
                                 <h2 class="mb-0">
-                                    <span>Section 4</span>
+                                    <span>4) Maven Project Setup</span>
                                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><i class="fa fa-plus-circle"></i></button>
                                 </h2>
                             </div>
                             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                <ul>
+                                    <li>Introduction to Maven</li>
+                                    <li>Managing Dependencies</li>
+                                    <li>Building Maven Projects</li>
+                                  </ul>                                </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFive">
+                                <h2 class="mb-0">
+                                    <span>5) Spring Beans</span>
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"><i class="fa fa-plus-circle"></i></button>
+                                </h2>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                <ul>
+                                    <li>Understanding Spring framework basics</li>
+                                    <li>Defining and managing Spring Beans</li>
+                                    <li>Bean scopes and lifecycle</li>
+                                  </ul>                                </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingsix">
+                                <h2 class="mb-0">
+                                    <span>6) Spring IOC & Dependency Injection</span>
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix"><i class="fa fa-plus-circle"></i></button>
+                                </h2>
+                            </div>
+                            <div id="collapsesix" class="collapse" aria-labelledby="headingsix" data-parent="#accordionExample">
+                                <ul>
+                                    <li>Inversion of Control (IOC) principles</li>
+                                    <li>Implementing Dependency Injection</li>
+                                    <li>Configuring Spring applications using annotations</li>
+                                  </ul>                                </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingseven">
+                                <h2 class="mb-0">
+                                    <span>7) Introduction to Spring Boot</span>
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven"><i class="fa fa-plus-circle"></i></button>
+                                </h2>
+                            </div>
+                            <div id="collapseseven" class="collapse" aria-labelledby="headingseven" data-parent="#accordionExample">
+                                <ul>
+                                    <li>Overview of Spring Boot</li>
+                                    <li>Setting up Spring Boot projects</li>
+                                    <li>Spring Boot annotations and auto-configuration</li>
+                                  </ul>                                </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingeight">
+                                <h2 class="mb-0">
+                                    <span>8) REST API</span>
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseeight" aria-expanded="false" aria-controls="collapseeight"><i class="fa fa-plus-circle"></i></button>
+                                </h2>
+                            </div>
+                            <div id="collapseeight" class="collapse" aria-labelledby="headingeight" data-parent="#accordionExample">
+                                <ul>
+                                    <li>Principles of RESTful web services</li>
+                                    <li>Building REST API using Spring Boot</li>
+                                    <li>Consuming RESTful services</li>
+                                  </ul>                                </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingnine">
+                                <h2 class="mb-0">
+                                    <span>9) In-Memory Storage using HashMap</span>
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsenine" aria-expanded="false" aria-controls="collapsenine"><i class="fa fa-plus-circle"></i></button>
+                                </h2>
+                            </div>
+                            <div id="collapsenine" class="collapse" aria-labelledby="headingnine" data-parent="#accordionExample">
+                                <ul>
+                                    <li>Utilizing HashMap for temporary storage</li>
+                                    <li>Performing CRUD operations with HashMap</li>
+                                  </ul>                                </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingten">
+                                <h2 class="mb-0">
+                                    <span>10) Spring Data JPA & Hibernate</span>
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseten" aria-expanded="false" aria-controls="collapseten"><i class="fa fa-plus-circle"></i></button>
+                                </h2>
+                            </div>
+                            <div id="collapseten" class="collapse" aria-labelledby="headingten" data-parent="#accordionExample">
+                                <ul>
+                                    <li>Introduction to Object Relational Mapping
+                                    </li>
+                                    <li>Introduction to Spring Data JPA</li>
+                                    <li>Configuring and using Hibernate ORM</li>
+                                    <li>Implementing JPA repositories</li>
+                                  </ul>                                </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingeleven">
+                                <h2 class="mb-0">
+                                    <span>11) Spring Security</span>
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseeleven" aria-expanded="false" aria-controls="collapseeleven"><i class="fa fa-plus-circle"></i></button>
+                                </h2>
+                            </div>
+                            <div id="collapseeleven" class="collapse" aria-labelledby="headingeleven" data-parent="#accordionExample">
+                                <ul>
+                                    <li>Understanding security concepts</li>
+                                    <li>Configuring Spring Security</li>
+                                    <li>Implementing authentication and authorization	</li>
+                                  </ul>                                </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header" id="headingeight">
+                                <h2 class="mb-0">
+                                    <span>Section 8</span>
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseeight" aria-expanded="false" aria-controls="collapseeight"><i class="fa fa-plus-circle"></i></button>
+                                </h2>
+                            </div>
+                            <div id="collapseeight" class="collapse" aria-labelledby="headingeight" data-parent="#accordionExample">
                                 <ul>
                                     <li>Apple</li>
                                     <li>Orange</li>
@@ -326,7 +446,7 @@
 
 
     <!-- Courses Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
@@ -420,14 +540,66 @@
             </div>
         </div>
     </div>
-    <!-- Courses End -->
+    Courses End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+               
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                            <h5 class="mb-3">Outcome</h5>
+                            <p>knowledge and skills required to develop full-stack Java applications with a modern React frontend.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
+                            <h5 class="mb-3">Projects</h5>
+                            <p>7 Mini projects and 1 Main project   </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                            <h5 class="mb-3">Assignments</h5>
+                            <p>Each topic will have assignments to practice</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                            <h5 class="mb-3">Additional Support</h5>
+                            <p>Job placement assistance
+                                Resume building and interview preparation
+                                Access to a community of peers and mentors for continuous learning and support
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+    
 
 
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3">Placements</h6>
                 <h1 class="mb-5">Our Students Say!</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
@@ -566,7 +738,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
